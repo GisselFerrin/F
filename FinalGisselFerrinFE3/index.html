@@ -1,55 +1,79 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    
-    <link rel="stylesheet" href="./src/Components/Header/header.module.css">
-    <link rel="stylesheet" href="./src/index.css">
-    <link rel="stylesheet" href="./src/Components/Card/card.module.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gissel Ferrin Final 2023 FE3</title>
-    <body>
-    <header>
-    
-      <div>
-        <p class="descuento">Clinica Odontológica</p>
-      </div>
-      
-    <div class="botones">
-      <a href="./src/Components/Card/card.module.css" style="margin-left:50px; margin-top:10px;border-radius: 8px; display:inline-block;font-weight: 500;font-style:initial; background-color:rgb(84, 129, 196);border: 10px;border-color: aquamarine;border-radius: 8px; color: black; font-family: Arial, Helvetica, sans-serif;">DENTISTAS </a><div style="display: inline-block;">🦷</div>
-      <a href="./src/Components/Favoritos.jsx" style="margin-left:50px; margin-top:10px;font-weight: 500;font-style:initial;background-color:rgb(84, 129, 196);border: 10px;border-color: aquamarine;border-radius: 8px; color: black; font-family: Arial, Helvetica, sans-serif;display:inline-block;">FAVORITOS </a> <div style="display: inline-block;">❤️</div>
-      <a href="./src/Components/Formulario.jsx" style="margin-left:50px; margin-top:10px;font-weight: 500;font-style:initial;background-color:rgb(84, 129, 196);border: 10px;border-color: aquamarine;border-radius: 8px; color: black; font-family: Arial, Helvetica, sans-serif;display:inline-block;">CONTACTO </a> <div style="display: inline-block;">☎️</div>
-      </div>
-      <div>
-    <button id="bdark">Tema</button>
-        </div>
-        
-      </header>
-      
-      
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Ferrin Gissel</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet"> 
+	<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="src/sass/estilos.scss">
+	<link rel="stylesheet" href="src/sass/estilos.css">
+</head>
+<body>
+	<div class="contenedor">
+		<nav>
+			<a class="logotipo" href="#">Consultorio Odontológico</a>
+			<div class="enlaces">
+				<a href="">Inicio</a>
+				<a href="src/Components/Card/card.module.css">Dentistas</a>
+				<a href="src/Components/Header/Favoritos.jsx">Favoritos</a>
+				<a href="src/Components/Formulario.jsx">Contacto</a>
+				<button class="switch" id="switch">
+					<span> <i class="fas fa-sun"></i></span>
+					<span><i class="fas fa-moon"></i></span>
+				</button>
+			</div>
+		</nav>
 
-    <script type="module" src="/src/main.jsx">
-    
-      const bdark = document.querySelector('#bdark');
-      const body = document.querySelector('body');
-      load ();
-      
-      dbark.addEventListener('click', e=>{
-        body.classList.toggle('darkmode');
-        store(body.classList.contains('darkmode'));
-      });
-      function load(){
-          const darkmode = localStorage.getItem('darkmode');
-          if(!darkmode){
-            store('false');
-          }else if(darkmode == 'true'){
-            body.classList.add('darkmode');
-          }
-      }
-      function store(value){
-        localStorage.setItem('darkmode',value);
-      }        
-    </script>
-  </body>
+		<section class="grid">
+			
+			<div class="card">
+				
+				<img src="./src/Img/Dr Javier Amadeo.png" alt="" >
+				<div class="botones">
+					<a href="#" class="boton primario">❤️</a>
+					<p>Dr Javier Amadeo</p>
+				</div>
+			</div>
+			<div class="card">
+				<img src="./src/Img/Dr Alvaro Perrone.png" alt="">
+				<div class="botones">
+					<a href="#" class="boton primario"> ❤️</a>
+					<p>Dr Alvaro Perrone</p>
+				</div>
+			</div>
+			<div class="card">
+				<img src="./src/Img/Dr Mauro Gomez.png" alt="">
+				<div class="botones">
+					<a href="#" class="boton primario"> ❤️</a>
+					<p>Dr Mauro Gomez</p>
+				</div>
+			</div>
+			<div class="card">
+				<img src="./src/Img/Dr Pedro Migues.png" alt="">
+				<div class="botones">
+					<a href="#" class="boton primario"> ❤️</a>
+					<p>Dr Pedro Migues</p>
+				</div>
+			</div>
+			<div class="card">
+				<img src="./src/Img/Dra Maria Estivao.png" alt="">
+				<div class="botones">
+					<a href="#" class="boton primario"> ❤️</a>
+					<p>Dra Maria Estivao</p>
+				</div>
+			</div>
+			<div class="card">
+				<img src="./src/Img/Dra Mariela Mateo.png" alt="">
+				<div class="botones">
+					<a href="#" class="boton primario"> ❤️</a>
+					<p>Dra Mariela Mateo</p>
+				</div>
+			</div>
+		</section>
+	</div>
+
+	<script src="src/js/main.js"></script>
+</body>
 </html>
