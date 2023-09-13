@@ -1,0 +1,39 @@
+.card {
+    border-radius: 8px;
+    border: 1px solid #fff;
+    
+}
+
+.nombre{
+    font-size: 24px;
+    color: white;
+    border-bottom: 1px solid #fff;
+    padding: 8px 16px;
+    background-color: #222;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+.apellido{
+    font-size: 24px;
+    color: white;
+    border-bottom: 1px solid #fff;
+    padding: 8px 16px;
+    background-color: #222;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+.matricula{
+    font-size: 24px;
+    color: white;
+    border-bottom: 1px solid #fff;
+    padding: 8px 16px;
+    background-color: #222;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+.card-body{
+    padding: 8px 16px;
+    background-color: #111;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}

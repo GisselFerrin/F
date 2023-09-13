@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    
+    <link rel="stylesheet" href="./src/Components/Header/header.module.css">
+    <link rel="stylesheet" href="./src/index.css">
+    <link rel="stylesheet" href="./src/Components/Card/card.module.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gissel Ferrin Final 2023 FE3</title>
+    <body>
+    <header>
+    
+      <div>
+        <p class="descuento">Clinica Odontológica</p>
+      </div>
+      
+    <div class="botones">
+      <a href="./src/Components/Card/card.module.css" style="margin-left:50px; margin-top:10px;border-radius: 8px; display:inline-block;font-weight: 500;font-style:initial; background-color:rgb(84, 129, 196);border: 10px;border-color: aquamarine;border-radius: 8px; color: black; font-family: Arial, Helvetica, sans-serif;">DENTISTAS </a><div style="display: inline-block;">🦷</div>
+      <a href="./src/Components/Favoritos.jsx" style="margin-left:50px; margin-top:10px;font-weight: 500;font-style:initial;background-color:rgb(84, 129, 196);border: 10px;border-color: aquamarine;border-radius: 8px; color: black; font-family: Arial, Helvetica, sans-serif;display:inline-block;">FAVORITOS </a> <div style="display: inline-block;">❤️</div>
+      <a href="./src/Components/Formulario.jsx" style="margin-left:50px; margin-top:10px;font-weight: 500;font-style:initial;background-color:rgb(84, 129, 196);border: 10px;border-color: aquamarine;border-radius: 8px; color: black; font-family: Arial, Helvetica, sans-serif;display:inline-block;">CONTACTO </a> <div style="display: inline-block;">☎️</div>
+      </div>
+      <div>
+    <button id="bdark">Tema</button>
+        </div>
+        
+      </header>
+      
+      
+
+    <script type="module" src="/src/main.jsx">
+    
+      const bdark = document.querySelector('#bdark');
+      const body = document.querySelector('body');
+      load ();
+      
+      dbark.addEventListener('click', e=>{
+        body.classList.toggle('darkmode');
+        store(body.classList.contains('darkmode'));
+      });
+      function load(){
+          const darkmode = localStorage.getItem('darkmode');
+          if(!darkmode){
+            store('false');
+          }else if(darkmode == 'true'){
+            body.classList.add('darkmode');
+          }
+      }
+      function store(value){
+        localStorage.setItem('darkmode',value);
+      }        
+    </script>
+  </body>
+</html>
